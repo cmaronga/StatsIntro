@@ -1,0 +1,40 @@
+----------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\mngari\OneDrive - Kemri Wellcome Trust\Phd\Post-doc\2021\post_WHO_TDR_trainings\Stata_trai
+> nings\mylog0.log
+  log type:  text
+ opened on:  30 Mar 2021, 10:40:24
+
+. 
+. //Change directirory 
+.  cd "C:\Users\mngari\OneDrive - Kemri Wellcome Trust\Phd\Post-doc\2021\post_WHO_TDR_trainings\Stata_trainings"
+C:\Users\mngari\OneDrive - Kemri Wellcome Trust\Phd\Post-doc\2021\post_WHO_TDR_trainings\Stata_trainings
+
+.  dir
+  <dir>   3/30/21 10:40  .                 
+  <dir>   3/30/21 10:40  ..                
+   2.7k   3/26/21 22:26  analysis0.log     
+  13.7k   3/18/21 12:26  babies.csv        
+  36.1k   3/29/21 20:42  birth_weight.csv  
+   3.2k   3/29/21 20:49  dofile1.do        
+   0.4k   3/26/21 21:59  Example1.do       
+3478.5k   3/29/21 21:07  Introduction to stata.pdf
+4961.3k   3/29/21 21:06  Introduction to stata.pptx
+  23.9k   3/29/21 12:44  lab_results0.dta  
+   0.3k   3/30/21 10:40  mylog0.log        
+  <dir>   3/30/21 10:10  New folder        
+  57.0k   3/29/21 12:44  section5.dta      
+
+.  
+.  
+.  
+.  
+.  
+.  //close my log
+.  log close
+      name:  <unnamed>
+       log:  C:\Users\mngari\OneDrive - Kemri Wellcome Trust\Phd\Post-doc\2021\post_WHO_TDR_trainings\Stata_trai
+> nings\mylog0.log
+  log type:  text
+ closed on:  30 Mar 2021, 10:40:24
+----------------------------------------------------------------------------------------------------------------

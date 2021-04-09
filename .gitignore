@@ -1,3 +1,5 @@
+
+=======
 # History files
 .Rhistory
 .Rapp.history
@@ -37,3 +39,12 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# all csv and xlsx files
+*.csv
+*.xlsx
+*.docx
+*.html
+
+
+

@@ -1,0 +1,47 @@
+---------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\nngao\Kemri Wellcome Trust\Moses Ngari - Stata_trainings\mylog0.log
+  log type:  text
+ opened on:  30 Mar 2021, 10:44:10
+
+. dir
+  <dir>   3/30/21 10:44  .                 
+  <dir>   3/30/21 10:44  ..                
+   0.1k   3/30/21 10:04  .849C9593-D756-4E56-8D6E-42412F2A707B
+   2.7k   3/26/21 22:26  analysis0.log     
+  13.7k   3/18/21 12:26  babies.csv        
+  36.1k   3/29/21 20:42  birth_weight.csv  
+   3.2k   3/29/21 20:49  dofile1.do        
+   0.4k   3/26/21 21:59  Example1.do       
+3478.5k   3/29/21 21:07  Introduction to stata.pdf
+4961.3k   3/29/21 21:06  Introduction to stata.pptx
+  23.9k   3/29/21 12:44  lab_results0.dta  
+   0.3k   3/30/21 10:44  mylog0.log        
+  <dir>   3/30/21 10:15  New folder        
+  57.0k   3/29/21 12:44  section5.dta      
+
+. use lab_results0.dta,clear
+
+. import help
+import: unknown subcommand "help"
+r(198);
+
+. help import
+
+. import delimited using babies.csv, varnames(1) clear
+(6 vars, 641 obs)
+
+. export delimited id matage hyp
+using required
+r(100);
+
+. export delimited id matage hyp gestwks sex using myexport, replace
+(note: file myexport.csv not found)
+file myexport.csv saved
+
+. log close
+      name:  <unnamed>
+       log:  C:\Users\nngao\Kemri Wellcome Trust\Moses Ngari - Stata_trainings\mylog0.log
+  log type:  text
+ closed on:  30 Mar 2021, 11:09:23
+---------------------------------------------------------------------------------------------
