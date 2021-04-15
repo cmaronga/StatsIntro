@@ -43,7 +43,6 @@ vignettes/*.pdf
 # all csv and xlsx files
 *.csv
 *.xlsx
-*.docx
 *.html
 
 
