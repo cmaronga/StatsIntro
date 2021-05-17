@@ -1,0 +1,81 @@
+---
+title: "Introduction to R & Data Management"
+author: "Christopher Maronga"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+header-includes:
+- \usepackage{booktabs}
+- \usepackage{longtable}
+- \usepackage{array}
+- \usepackage{multirow}
+- \usepackage{wrapfig}
+- \usepackage{float}
+- \usepackage{colortbl}
+- \usepackage{pdflscape}
+- \usepackage{tabu}
+- \usepackage{threeparttable}
+- \usepackage{threeparttablex}
+- \usepackage[normalem]{ulem}
+- \usepackage{makecell}
+- \usepackage{xcolor}
+- \usepackage{longtable}
+output:
+   beamer_presentation:
+    theme: "AnnArbor"
+    colortheme: "dolphin"
+    fonttheme: "structurebold"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F,
+                      message = F,
+                      warning = F,
+                      comment = "")
+```
+
+
+# What is R
+
+- R is both a scripted programming language and software environment for statistical computing.\vspace{5mm}
+
+- R is widely used for statistical analysis and creation of high-quality publishable graphics.\vspace{5mm}
+
+- It's open source, free to use and supported by a large community of users and developers. \vspace{5mm}
+
+- Flexible and highly scalable via user defined packages and functions.
+
+
+# Why R
+
+- \textcolor{blue}{Reproducibility} - one code; multiple users and projects .\vspace{5mm}
+
+- \textcolor{blue}{Flexible} and easy to learn.\vspace{5mm}
+
+- \textcolor{blue}{Scalability} - You can define/customize your own functions and/or packages. \vspace{5mm}
+
+- \textcolor{blue}{Interoperability} - same code across platforms (mac, windows, linux etc).
+
+
+# Getting started - Installing R and Rstudio
+
+- You can install the latest version of R from the  [\textcolor{blue}{CRAN repository}](https://cran.r-project.org/). CRAN stands for **C**omprehensive **R** **A**rchive **N**etwork\newline
+
+- The latest version or R is 4.0.5 as of time of the slide creation. This might change with time\newline
+
+- Rstudio is an IDE (Intergrated Development Environment for R). You can install the latest version of Rstudio [\textcolor{blue}{here}](https://www.rstudio.com/products/rstudio/download/#download)
+
+     - **NOTE:** You do not need Rstudio to use R, BUT it makes things easier. So I will highly recommend you to install Rstudio for easy and efficient coding in R.
+
+
+# Further Information
+
+- History of R on [\textcolor{blue}{Wikipedia}](https://en.wikipedia.org/wiki/R_(programming_language))\vspace{2mm}
+
+- Short video on [\textcolor{blue}{What’s R}](https://www.youtube.com/watch?v=XcBLEVknqvY&list=PLj2KWjS8zBiZBVrhh0iyplklr1I2HSG93&index=9)\vspace{2mm}
+
+- More about [\textcolor{blue}{Rstudio IDE}](https://www.rstudio.com/products/rstudio/)\vspace{2mm}
+
+
+
+
+
+
