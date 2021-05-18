@@ -68,11 +68,11 @@ knitr::include_graphics("Rstudio_image.PNG")
 - R syntax is easy to use. Type commands after the prompt `>` and hit enter to execute in console.\vspace{2mm}
 - Simple illustration, using R as an overgrown calculator to evaluate mathematical computation.\vspace{2mm}
 - Broad classification of R syntax:-\vspace{2mm}
-    - **Expression** - Commands are evaluated, printed on console and the value is lost (requires re-typing).
-    - **Assignments** - Storing intermediate results of an expression to an object which can be re-used.`<-, =, assign()`
-- Objects are created in memory and saved into a file called `.RData`.\vspace{2mm}
-- R commands are stored in a file names `.Rhistory`. \vspace{2mm}
-- R is case sensitive `name` and `Name` refer to different variables
+    - \textcolor{blue}{Expression}- Commands are evaluated, printed on console and the value is lost (requires re-typing).
+    - \textcolor{blue}{Assignments}- Storing intermediate results of an expression to an object which can be re-used (\textcolor{red}{<-, =, assign()})
+- Objects are created in memory and saved into a file called \textcolor{red}{.RData}.\vspace{2mm}
+- R commands are stored in a file names \textcolor{red}{.Rhistory}. \vspace{2mm}
+- R is case sensitive \textcolor{green}{name} and \textcolor{green}{Name} refer to different variables
 
 
 # Interactive R session: 01 - How R works
@@ -87,14 +87,14 @@ knitr::include_graphics("Rstudio_image.PNG")
 - We assign results of expressions into objects with unique names in R.\vspace{2mm}
 
 - Objects can be of different forms. Most common types include:-
-   - Vectors (building block of R language)
+   - \textcolor{red}{Vectors} (building block of R language)
        - Atomic vectors - Homogeneous, contains items of ONLY one data type
        - Lists - Heterogeneous, contains objects of any type
-   - Matrices\vspace{1mm}
-   - Data frames \vspace{1mm}
-   - Arrays \vspace{1mm}
-   - Complex numbers* \vspace{1mm}
-   - Raw*. \vspace{2mm}
+   - \textcolor{red}{Matrices}\vspace{1mm}
+   - \textcolor{red}{Data frames} \vspace{1mm}
+   - \textcolor{red}{Arrays} \vspace{1mm}
+   - \textcolor{red}{Complex numbers*} \vspace{1mm}
+   - \textcolor{red}{Raw*}. \vspace{2mm}
 
 - These ecosystem of different forms of objects is referred to as data structures.\vspace{2mm}
 
@@ -109,9 +109,9 @@ knitr::include_graphics("Rstudio_image.PNG")
     - Character \vspace{5mm}
     
     
-- We use the function `c()` `meaning combine items` to create vectors in R
+- We use the function \textcolor{red}{c() meaning combine items} to create vectors in R
 
-- Generic functions `ls()` and `rm()` are used to list and remove objects in the workspace.
+- Generic functions \textcolor{red}{ls()} and \textcolor{red}{rm()} are used to list and remove objects in the workspace.
 
 # Interactive R session: 02 - Creating vectors in R
 
@@ -121,9 +121,9 @@ knitr::include_graphics("Rstudio_image.PNG")
 
 # R data structures(3/4) - Lists
 
-- A list is a generic vector containing objects/elements of different data types (heterogenous).
+- A list is a generic vector containing objects/elements of different data types (heterogeneous).
 
-- We  construct lists using the function `list()`. Lists are also reffered to as recursive vectors because it can contain other lists.
+- We  construct lists using the function \textcolor{red}{list()}. Lists are also referred to as recursive vectors because it can contain other lists.
 
 ```{r eval=F}
 my_list <- list(
@@ -147,7 +147,7 @@ str(my_list)
 
 - This means that a data frame has both coloumn and row names. Basically a data frame is a list of vectors of equal length
 
-- Data frames are created using the function `data.frame()` which takes named vectors as arguments.
+- Data frames are created using the function \textcolor{red}{data.frame()} which takes named vectors as arguments.
 
 ```{r eval=F}
 my_dataframe <- data.frame(
@@ -156,7 +156,7 @@ my_dataframe <- data.frame(
   col_n = c("values_to_go_to_this_coloumnn")
 )
 ```
-- Let's practice on data frames using other functions such as `head()` and `tail()` in addition to the now `str()` that you are familiar with.
+- Let's practice on data frames using other functions such as \textcolor{red}{head()}, \textcolor{red}{tail()}  and \textcolor{red}{str()}.
 
 # Interactive R session: 04 - Data frames
 
@@ -175,21 +175,19 @@ my_dataframe <- data.frame(
 
 
 
-<!-- # Subsetting/Indexing elements of an object -->
+# Subsetting/Indexing elements of an object
 
-<!-- More often you will want to extract elements or components of a vector, list, matrices and data frames. -->
-<!-- We apply 3 types of indexing when extracting elements of an object (where index denotes the position of the element in the vector) -->
+- More often you will want to extract elements or components of a object.\vspace{3mm}
+- We explore how to subset `data.frames`, `lists` and `vectors` \vspace{3mm}
+- Combining integer vector indexing (`negative` _omits_ while `positive` _retains_ ) with `[]` and `[[]]`\vspace{3mm}
+- Primarily use dollar sign (`$`) to subset dataframes and `attach/detach` to index variables directly.
 
-<!-- - Integer vector indexing (`negative` _omits_ while `positive` _retains_ ) -->
-<!-- - character vector indexing -->
-<!-- - logical vector indexing -->
-
-<!-- Note: For **Integer vector indexing**, unlike other programming languages (`python, Java and C++`) that starts indexing from **0**, indexing of objects in R starts from **1** -->
+Note: For **Integer vector indexing**, unlike other programming languages (`python, Java and C++`) that starts indexing from **0**, indexing of objects in R starts from **1**
 
 
-<!-- # Interactive R session: 05 - Subsetting objects -->
+# Interactive R session: 05 - Subsetting objects
 
-<!-- ## We switch to R and write code to demonstrate the ideas. -->
+## We switch to R and write code to demonstrate the ideas.
 
 
 
@@ -212,7 +210,7 @@ also require(package name)
 - To get help on a particular function, use `?function_name` or `help("function_name")` and you will be presented with a documentation on arguments and use case of an R function.
 
 
-# Interactive R session: 05 - R packages
+# Interactive R session: 06 - R packages
 
 ## We switch to R and write code to demonstrate the ideas.
 
@@ -230,7 +228,7 @@ also require(package name)
 **NOTE:** The above concepts are very key when reading data into R, therefore a clear understanding of how they work will come in handy in importing data into R suing any method defined.
 
 
-# Interactive R session: 06 - Working directories
+# Interactive R session: 07 - Working directories
 
 ## We switch to R and write code to demonstrate the ideas.
 
@@ -252,14 +250,22 @@ Some examples of applicable files to read include csv, tab delimited(.txt), spac
 
 get help by `?read.table` or `read.csv`
 
-# Interactive R session: 07 - Getting data into R
+# Interactive R session: 08 - Getting data into R
 
 ## We switch to R and write code to demonstrate the ideas.
 
 
 # Exercise Two
 
+1. Read the dataset `birth_weight.csv` into R and name it `birth_weight_data`.
+    - Print the count of number of rows and columns in the dataset
+    - Print the first 10 observations and last 10 observations in the dataset
+    - What is the mean of the variable `matage`
+    - Use `summary` to print general summary of the data. How many observations are female?\vspace{5mm}
 
+2. Read the dataset `bank_churners.csv` into R and name it `churners_data`.
+    - How many rows does `churners_data` contain?
+    - Use `str` function to print details of the structure of churners_data.
 
 # Introduction to `dplyr` for data management in R
 
@@ -276,7 +282,7 @@ The main verbs for data manipulation provided by `dplyr` include:-
 - `summarise()` to condense multiple values to a single value. Can be used together with `group_by()`
 - `sample_n()` and `sample_frac()` to take random samples.
 
-# Interactive R session: 08 - Data management basics
+# Interactive R session: 09 - Data management basics
 
 ## We switch to R and write code to demonstrate the ideas.
 
