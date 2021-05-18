@@ -41,8 +41,6 @@ vignettes/*.pdf
 .Renviron
 
 # all csv and xlsx files
-*.csv
-*.xlsx
 *.html
 
 

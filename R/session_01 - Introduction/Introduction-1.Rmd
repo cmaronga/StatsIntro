@@ -69,10 +69,10 @@ knitr::include_graphics("Rstudio_image.PNG")
 - Simple illustration, using R as an overgrown calculator to evaluate mathematical computation.\vspace{2mm}
 - Broad classification of R syntax:-\vspace{2mm}
     - **Expression** - Commands are evaluated, printed on console and the value is lost (requires re-typing).
-    - **Assignments** - Storing intermediate results of an expression to an object which can be re-used.
+    - **Assignments** - Storing intermediate results of an expression to an object which can be re-used.`<-, =, assign()`
 - Objects are created in memory and saved into a file called `.RData`.\vspace{2mm}
 - R commands are stored in a file names `.Rhistory`. \vspace{2mm}
-- R is sensitive `name` and `Name` refer to different variables
+- R is case sensitive `name` and `Name` refer to different variables
 
 
 # Interactive R session: 01 - How R works
@@ -121,9 +121,9 @@ knitr::include_graphics("Rstudio_image.PNG")
 
 # R data structures(3/4) - Lists
 
-A list is a generic vector containing objects/elements of different data types (heterogenous).
+- A list is a generic vector containing objects/elements of different data types (heterogenous).
 
-We  construct lists using the function `list()`. Lists are also reffered to as recursive vectors because it can contain other lists.
+- We  construct lists using the function `list()`. Lists are also reffered to as recursive vectors because it can contain other lists.
 
 ```{r eval=F}
 my_list <- list(
@@ -143,11 +143,11 @@ str(my_list)
 
 # R data structures(4/4) - data frames
 
-Data frames generally refer to tabular data (rows and coloumns). A data frame is the most common way of storing data in R.
+- Data frames generally refer to tabular data (rows and coloumns). A data frame is the most common way of storing data in R.
 
-This means that a data frame has both coloumn and row names. Basically a data frame is a list of vectors of equal length
+- This means that a data frame has both coloumn and row names. Basically a data frame is a list of vectors of equal length
 
-Data frames are created using the function `data.frame()` which takes named vectors as arguments.
+- Data frames are created using the function `data.frame()` which takes named vectors as arguments.
 
 ```{r eval=F}
 my_dataframe <- data.frame(
@@ -156,7 +156,7 @@ my_dataframe <- data.frame(
   col_n = c("values_to_go_to_this_coloumnn")
 )
 ```
-Let's practice on data frames using other functions such as `head()` and `tail()` in addition to the now `str()` that you are familiar with.
+- Let's practice on data frames using other functions such as `head()` and `tail()` in addition to the now `str()` that you are familiar with.
 
 # Interactive R session: 04 - Data frames
 
@@ -165,23 +165,31 @@ Let's practice on data frames using other functions such as `head()` and `tail()
 
 # Exercise one
 
+1. Create a vector whose elements are names of the first 6 months of the year and name it `monthVec`\vspace{1mm}
+2. Create a vector named `distances` whose elements consist of 10, 25.4, 16.8, 23, 40 and 17.1 \vspace{1mm}
+3. Create an integer of numbers between 5 and 12. Name it `intVec`\vspace{1mm}
+4. Create a logical vector with TRUE, FALSE, TRUE, FALSE and FALSE as it's elements. Name it `logVec`\vspace{1mm}
+5. Combine 1 and 4 into a new vector named `char_log`. Notice anything?\vspace{1mm}
+6. Combine 2 and 3 into a new vector named `int_duble`. Notice anything?\vspace{1mm}
+7. Create a list containing objects 1 to 6 above and name it `ListOne`
 
 
-# Subsetting/Indexing elements of an object
 
-More often you will want to extract elements or components of a vector, list, matrices and data frames.
-We apply 3 types of indexing when extracting elements of an object (where index denotes the position of the element in the vector)
+<!-- # Subsetting/Indexing elements of an object -->
 
-- Integer vector indexing (`negative` _omits_ while `positive` _retains_ )
-- character vector indexing
-- logical vector indexing
+<!-- More often you will want to extract elements or components of a vector, list, matrices and data frames. -->
+<!-- We apply 3 types of indexing when extracting elements of an object (where index denotes the position of the element in the vector) -->
 
-Note: For **Integer vector indexing**, unlike other programming languages (`python, Java and C++`) that starts indexing from **0**, indexing of objects in R starts from **1**
+<!-- - Integer vector indexing (`negative` _omits_ while `positive` _retains_ ) -->
+<!-- - character vector indexing -->
+<!-- - logical vector indexing -->
+
+<!-- Note: For **Integer vector indexing**, unlike other programming languages (`python, Java and C++`) that starts indexing from **0**, indexing of objects in R starts from **1** -->
 
 
-# Interactive R session: 05 - Subsetting objects
+<!-- # Interactive R session: 05 - Subsetting objects -->
 
-## We switch to R and write code to demonstrate the ideas.
+<!-- ## We switch to R and write code to demonstrate the ideas. -->
 
 
 
@@ -191,20 +199,20 @@ Note: For **Integer vector indexing**, unlike other programming languages (`pyth
 compiled code(s) that enable R users perform even more tasks with
 R(expand functionality). 
 
-- Examples of R packages include dplyr, ggplot2 etc.
-There are currently over 13,000 contributed packages in the Comprehensive
+- Examples of R packages include `dplyr`, `ggplot2` etc.
+There are currently over 14,500 contributed packages in the Comprehensive
 R Archive Network(known as CRAN).
 
 **Common commands**
 
-- install.packages(“package name”) # to install a package
-- library(package name) # load an R package into the workspace for use,
+- `install.packages(“package name”)` # to install a package
+- `library(package name)` # load an R package into the workspace for use,
 also require(package name)
 
-- To get help on a particular function, use ?function_name or help("function_name") and you will be presented with a documentation on arguments and use case of an R function.
+- To get help on a particular function, use `?function_name` or `help("function_name")` and you will be presented with a documentation on arguments and use case of an R function.
 
 
-# Interactive R session: 06 - R packages
+# Interactive R session: 05 - R packages
 
 ## We switch to R and write code to demonstrate the ideas.
 
@@ -222,7 +230,7 @@ also require(package name)
 **NOTE:** The above concepts are very key when reading data into R, therefore a clear understanding of how they work will come in handy in importing data into R suing any method defined.
 
 
-# Interactive R session: 07 - Working directories
+# Interactive R session: 06 - Working directories
 
 ## We switch to R and write code to demonstrate the ideas.
 
@@ -234,7 +242,7 @@ also require(package name)
 - **General way** using the command **`read.table()`**.
 
 You can read a variety of file extensions into R using the function `read.table()`.
-Some examples of applicable files to read include csv, tab delimited(.txt), space demilited and any flat file so long as it's defined interms of what character separates its coloumns.
+Some examples of applicable files to read include csv, tab delimited(.txt), space demilited and any flat file so long as it's defined interms of what character separates its columns.
 
 **NOTE:** Knowing the extension of the file you are reading and how its coloumns are separated is essential in using `read.table()` command.
 
@@ -244,7 +252,7 @@ Some examples of applicable files to read include csv, tab delimited(.txt), spac
 
 get help by `?read.table` or `read.csv`
 
-# Interactive R session: 08 - Getting data into R
+# Interactive R session: 07 - Getting data into R
 
 ## We switch to R and write code to demonstrate the ideas.
 
@@ -268,7 +276,7 @@ The main verbs for data manipulation provided by `dplyr` include:-
 - `summarise()` to condense multiple values to a single value. Can be used together with `group_by()`
 - `sample_n()` and `sample_frac()` to take random samples.
 
-# Interactive R session: 09 - Data management basics
+# Interactive R session: 08 - Data management basics
 
 ## We switch to R and write code to demonstrate the ideas.
 
