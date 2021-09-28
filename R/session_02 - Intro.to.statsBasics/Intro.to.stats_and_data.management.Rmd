@@ -1,0 +1,77 @@
+---
+title: "Introduction to Statistics with R"
+author: "Christopher Maronga"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+header-includes:
+output:
+   beamer_presentation:
+    theme: "AnnArbor"
+    colortheme: "dolphin"
+    fonttheme: "structurebold"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = T,
+                      message = F,
+                      warning = F,
+                      comment = "")
+```
+
+
+# Session outline
+
+- External packages.\vspace{5mm}
+- Data transformations - basics.\vspace{5mm}
+- Steps in Exploratory Data Analysis (EDA)
+   - Numeric summaries
+   - Visualizations.\vspace{5mm}
+   
+- Robust ways of creating contingency tables\vspace{5mm}
+
+- Exporting/saving outputs for later use.
+
+
+
+# External packages
+
+- R packages are contributed libraries for increased efficiency.\vspace{5mm}
+
+- There are currently over 18,200 packages in [\textcolor{blue}{CRAN}](https://cran.r-project.org/) repository.\vspace{5mm}
+
+- Install package - `install.packages("name")`.\vspace{5mm}
+
+- Load package `library("name")` or `require("name")`.
+
+
+# Data transformation - Basics
+
+- Critical step in analysing and summarizing data .\vspace{2mm}
+
+- Common forms of data.
+     - Long format - observation appears multiple times (longitudinal data)
+     - Wide format - observation appears ONLY once
+
+- Variable transformations.
+     - For computing necessary statistics
+     - Outputting correct summaries
+     - Effective visualization
+
+- Saving objects (datasets, summary tables and plots).
+
+
+
+# Reference material
+
+- [\textcolor{blue}{An introduction to R hand-out}](https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf)\vspace{2mm}
+
+
+- [\textcolor{blue}{Chapter 7}](https://r4ds.had.co.nz/) of R for Data Science book\vspace{2mm}
+
+- Introduction to R slides by [\textcolor{blue}{Dr. Norma Coﬀey}](https://www.scribd.com/document/284508628/R-Slides)\vspace{2mm}
+
+- The book [\textcolor{blue}{R in Action}](http://www.cs.uni.edu/~jacobson/4772/week11/R_in_Action.pdf) for data analysis and graphics\vspace{2mm}
+
+
+
+
+
